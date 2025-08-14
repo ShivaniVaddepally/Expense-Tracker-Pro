@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Expense Tracker Pro</h1>
+
+        <div class="balance">
+            <h2>Total Balance: ₹<span id="balance">0</span></h2>
+        </div>
+
+        <form id="expense-form">
+            <input type="text" id="description" placeholder="Expense description" required>
+            <input type="number" id="amount" placeholder="Amount (₹)" required>
+            <select id="category">
+                <option value="Food">🍔 Food</option>
+                <option value="Rent">🏠 Rent</option>
+                <option value="Travel">🚗 Travel</option>
+                <option value="Misc">🎯 Misc</option>
+            </select>
+            <input type="date" id="date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <h3>Transactions</h3>
+        <ul id="transactions"></ul>
+
+        <div class="buttons">
+            <button id="exportCSV">📤 Export CSV</button>
+            <button id="clearAll">🗑 Clear All</button>
+        </div>
+
+        <h3>Expense by Category</h3>
+        <canvas id="expenseChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
